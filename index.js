@@ -69,7 +69,8 @@ prev.addEventListener("click", function() {
 
 const acc = document.getElementsByClassName("accordion");
 
-for (let i = 0; i < acc.length; i++) {this.classList.toggle("active");
+for (let i = 0; i < acc.length; i++) {
+  this.classList.toggle("active");
 
   acc[i].addEventListener("click", function() {let panel = this.nextElementSibling;
 
