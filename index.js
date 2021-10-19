@@ -67,20 +67,35 @@ prev.addEventListener("click", function() {
 
 })
 
+/////////////FAQ accordion section///////////////
+
+
+//delcare default vars
 const acc = document.getElementsByClassName("accordion");
 
+//loop through all accordion buttons
 for (let i = 0; i < acc.length; i++) {
-  this.classList.toggle("active");
 
-  acc[i].addEventListener("click", function() {let panel = this.nextElementSibling;
+  //trigger an event after click
+  acc[i].addEventListener("click", function() {
 
-    if (panel.style.maxHeight){panel.style.maxHeight = null;
+    this.classList.toggle("active");
 
-    } else {panel.style.maxHeight = panel.scrollHeight + "px";
+    let panel = this.nextElementSibling;
 
+
+    //if sibling is open, close it, if closed, open it
+    if (panel.style.maxHeight){
+      //panel is open
+      panel.style.maxHeight = null;
+    } else {
+      //panel is closed
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }
+
+
 
 const popUp = document.getElementById('pop-up');
 const popUpLayer = document.getElementById('pop-up-layer');

@@ -553,14 +553,13 @@
   padding-bottom: 2rem;
 }
 
-.faq h2 {
+.faq {
   text-align: center;
 }
 
 .faq-container {
   width: 60%;
 }
-
 
 .accordion {
     background-color: #eee;
