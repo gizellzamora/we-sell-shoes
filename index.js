@@ -1,3 +1,27 @@
+const popUp = document.getElementById('pop-up');
+const popUpLayer = document.getElementById('pop-up-layer');
+const closeModal = document.getElementById('close-pop-up');
+
+const subBtn = document.getElementById('sub-btn');
+
+subBtn.addEventListener("click", () => {
+  popUpLayer.style.display = 'flex';
+})
+
+closeModal.addEventListener("click", function() {
+  popUpLayer.style.display = 'none';
+})
+
+
+let popUpSeconds = 40;
+
+let popUpFun = window.setInterval(function() {
+  popUpLayer.style.display = 'flex';
+
+  window.clearInterval(popUpFun);
+
+}, popUpSeconds * 1000);
+
 const nextNext = document.getElementById('next-next')
 const next = document.getElementById('next');
 const prev = document.getElementById('prev');
@@ -94,28 +118,3 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
-
-
-
-const popUp = document.getElementById('pop-up');
-const popUpLayer = document.getElementById('pop-up-layer');
-const closeModal = document.getElementById('close-pop-up');
-
-const subBtn = document.getElementById('sub-btn');
-
-subBtn.addEventListener("click", () => {
-  popUpLayer.style.display = 'flex';
-})
-
-closeModal.addEventListener("click", function() {
-  popUpLayer.style.display = 'none';
-})
-
-let popUpSeconds = 40;
-
-let popUpFun = window.setInterval(function() {
-  popUpLayer.style.display = 'flex';
-
-  window.clearInterval(popUpFun);
-
-}, popUpSeconds * 1000);
